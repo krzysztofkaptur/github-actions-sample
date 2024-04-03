@@ -15,10 +15,10 @@ on:
 env:
   IMAGE_NAME: novo-notes
   AWS_REGION: us-east-1                          
-  ECS_SERVICE: ecs-cicd-ecs-service              
-  ECS_CLUSTER: ecs-cicd-ecs-cluster              
+  ECS_SERVICE: arn:aws:ecs:eu-north-1:381492012543:service/novo-notes-cluster/novo-notes-service           
+  ECS_CLUSTER: arn:aws:ecs:eu-north-1:381492012543:cluster/goals-cluster             
   ECS_TASK_DEFINITION: aws/td.json 
-  CONTAINER_IMAGE: ajimbong/novo-notes
+  CONTAINER_IMAGE: jakiscwaniak/novo-notes
   CONTAINER_NAME: novo-notes
   
 defaults:
