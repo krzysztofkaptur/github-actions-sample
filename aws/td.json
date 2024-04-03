@@ -1,0 +1,44 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:587355757958:task-definition/service:6",
+  "containerDefinitions": [
+    {
+      "name": "novo-notes",
+      "image": "ajimbong/novo-notes",
+      "cpu": 10,
+      "memory": 512,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": []
+    }
+  ],
+  "family": "service",
+  "executionRoleArn": "arn:aws:iam::587355757958:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 6,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EC2", "FARGATE"],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "registeredAt": "2023-08-08T14:45:42.372Z",
+  "registeredBy": "arn:aws:iam::587355757958:user/ajim",
+  "tags": []
+}
