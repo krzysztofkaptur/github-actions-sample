@@ -4,6 +4,12 @@ on:
     branches:
       - "master"
   workflow_dispatch:
+  workflow_call:
+    secrets:
+      DOCKER_HUB_USERNAME:
+        required: true
+      DOCKER_HUB_PASSWORD:
+        required: true
 
 # secrets:
 #   DOCKER_HUB_USERNAME: 
@@ -70,3 +76,4 @@ jobs:
               service: ${{ env.ECS_SERVICE }}
               cluster: ${{ env.ECS_CLUSTER }}
               wait-for-service-stability: true
+    
