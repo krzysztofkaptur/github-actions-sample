@@ -37,7 +37,7 @@ jobs:
     permissions:
       packages: write
       contents: read
-    environment: production
+    environment: sample
     env:
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
       DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
